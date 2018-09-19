@@ -1,4 +1,32 @@
 ---
-title: "p8105_hw1_yw3095.Rmd"
-output: html_document
+title: "p8105_hw1_yw3095"
+author: "Yixuan Wang"
+date: "9/21/2018"
+output: github_document
 ---
+```{r setup, include=FALSE}
+getwd()
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+##problem 1:
+This problem focuses on plotting and the use of inline R code.
+
+First we create a dataframe:
+```{r}
+set.seed(1234)
+hw1_df = tibble(
+  norm_samp = runif(10, 0, 5),
+  vec_logical = c(FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE),
+  vec_char = c("good","bad", "good","good","good","bad","good","good","good","bad"),
+  vec_factor = factor(c("one","two","three","four","five","six","seven","eight","nine","ten"))
+)
+```
+examine classes
+```{r}
+class(hw1_df$vec_char)
+class(hw1_df$vec_factor)
+```
+
+
